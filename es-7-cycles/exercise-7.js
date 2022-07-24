@@ -1,3 +1,5 @@
+// Esercizio svolto in Pair Programming //
+
 function nicknameMap(persons) {
   let nickname = [];
 
@@ -5,7 +7,6 @@ for (let i = 0; i < 10; i++) {
   nickname.push(persons[i].name + "-" + persons[i].age);
 }
 return nickname;
-
 }
 
 const persons = [

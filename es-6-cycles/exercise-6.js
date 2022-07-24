@@ -1,6 +1,6 @@
 function adultFilter(persons) {
   let ofAge = [];
-  for(let i = 0; i < persons.length; i++) {
+  for (let i = 0; i < persons.length; i++) {
     if (persons[i].age >= 18) {
       ofAge.push(persons[i]);
     }
