@@ -42,10 +42,6 @@ I dati del post dovranno essere trasmessi in seguito alla compilazione di un for
         const commit = await response.json();
         console.log(commit);
 
-        if (response.ok) {
-          alert("Your task has been posted");
-        }
-
       } catch (error) {
         console.log(error);
       }
