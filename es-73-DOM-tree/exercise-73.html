@@ -1,0 +1,60 @@
+<!-- # Dom Tree - Exercise 5
+Implementare il codice necessario per creare una tabella le cui righe sono generate dinamicamente.
+Al click del pulsante "Add Row" occorre richiamare la funzione `addRow`,
+la quale si occupa di creare dinamicamente un elemento `<tr>` contenente
+un campo di testo per ciascuna colonna:
+`firstName`, `lastName` e `age`.
+
+Appendere la riga generata al `<tbody>` della tabella. -->
+
+  <html>
+  <body>
+    <div id="container">
+      <h2>Person's List</h2>
+      <table id="person-table">
+        <tbody></tbody>
+      </table>
+      <button id="add-row">Add row</button>
+    </div>
+  </body>
+</html>
+
+<script>
+ 
+
+const tableHeaders = ["firstname", "lastName", "age"];
+  
+function createTableHeaders() {
+  const bodyTable = document.querySelector("tbody");
+  const tableRow = bodyTable.insertRow(0);
+
+  for (let i = 0; i < tableHeaders.length; i++) {
+    const headersElements = document.createElement("th");
+    headersElements.innerHTML = tableHeaders[i];
+    tableRow.appendChild(headersElements);
+  }
+
+}
+
+createTableHeaders();
+  
+
+function addRow() {
+  const bodyTable = document.querySelector("tbody");
+  const newRow = bodyTable.insertRow(-1);
+
+  for (let i = 0; i < tableHeaders.length; i++) {
+    const inputData = document.createElement("td");
+    inputData.innerHTML = `<input type="text">`;
+    newRow.appendChild(inputData);
+  }
+
+}
+
+document.getElementById("add-row").addEventListener("click", addRow);
+
+      
+    
+
+  
+</script>
